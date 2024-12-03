@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1525</width>
-    <height>1191</height>
+    <width>1551</width>
+    <height>1385</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -273,6 +273,16 @@
          </widget>
         </item>
         <item>
+         <widget class="OffsetTable" name="offset_table">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>390</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QGroupBox" name="groupBox_2">
           <property name="title">
            <string>Actions</string>
@@ -480,6 +490,11 @@
    <class>RecentFileComboBox</class>
    <extends>QComboBox</extends>
    <header>qtpyvcp.widgets.input_widgets.recent_file_combobox</header>
+  </customwidget>
+  <customwidget>
+   <class>OffsetTable</class>
+   <extends>QTableView</extends>
+   <header>qtpyvcp.widgets.input_widgets.offset_table</header>
   </customwidget>
  </customwidgets>
  <resources/>
