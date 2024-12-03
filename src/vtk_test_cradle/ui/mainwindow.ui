@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1525</width>
+    <height>1191</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,2">
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="VTKBackPlot" name="vtkbackplot"/>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_2" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>50</height>
+            </size>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QPushButton" name="btnClearVtk">
+              <property name="text">
+               <string>Clear Plot</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="btnZView">
+              <property name="text">
+               <string>Z View</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QPushButton" name="vtk_center">
+              <property name="text">
+               <string>Center Plot</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="ActionButton" name="actionbutton_2">
+            <property name="text">
+             <string>E-Stop</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>machine.estop.toggle</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ActionButton" name="actionbutton">
+            <property name="text">
+             <string>Power</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>machine.power.toggle</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="RecentFileComboBox" name="recentfilecombobox"/>
+        </item>
+        <item>
+         <widget class="GcodeTextEdit" name="gcodetextedit"/>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="title">
+           <string>Jog</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="3">
+            <widget class="ActionButton" name="actionbutton_10">
+             <property name="text">
+              <string>Y+</string>
+             </property>
+             <property name="actionName" stdset="0">
+              <string>machine.jog.axis:y,pos</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="ActionButton" name="actionbutton_11">
+             <property name="text">
+              <string>Y-</string>
+             </property>
+             <property name="actionName" stdset="0">
+              <string>machine.jog.axis:y,neg</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="ActionButton" name="actionbutton_9">
+             <property name="text">
+              <string>X-</string>
+             </property>
+             <property name="actionName" stdset="0">
+              <string>machine.jog.axis:x,neg</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="ActionButton" name="actionbutton_8">
+             <property name="text">
+              <string>X+</string>
+             </property>
+             <property name="actionName" stdset="0">
+              <string>machine.jog.axis:x,pos</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <widget class="ActionButton" name="actionbutton_12">
+             <property name="text">
+              <string>Z+</string>
+             </property>
+             <property name="actionName" stdset="0">
+              <string>machine.jog.axis:z,pos</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="5">
+            <widget class="ActionButton" name="actionbutton_13">
+             <property name="text">
+              <string>Z-</string>
+             </property>
+             <property name="actionName" stdset="0">
+              <string>machine.jog.axis:z,neg</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>DRO</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="1" column="1">
+            <widget class="DROLabel" name="drolabel">
+             <property name="referenceType" stdset="0">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>REL</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>X</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Y</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="DROLabel" name="drolabel_2"/>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>ABS</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Z</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="DROLabel" name="drolabel_3">
+             <property name="referenceType" stdset="0">
+              <number>0</number>
+             </property>
+             <property name="axisNumber" stdset="0">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="DROLabel" name="drolabel_4">
+             <property name="axisNumber" stdset="0">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="DROLabel" name="drolabel_5">
+             <property name="referenceType" stdset="0">
+              <number>0</number>
+             </property>
+             <property name="axisNumber" stdset="0">
+              <number>2</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="DROLabel" name="drolabel_6">
+             <property name="axisNumber" stdset="0">
+              <number>2</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>Actions</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="1">
+            <widget class="MDIButton" name="mdibutton">
+             <property name="text">
+              <string>Zero XY in G5x</string>
+             </property>
+             <property name="MDICommand" stdset="0">
+              <string>G10L20P0X0Y0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="MDIButton" name="mdibutton_2">
+             <property name="text">
+              <string>Zero Z in G5x</string>
+             </property>
+             <property name="MDICommand" stdset="0">
+              <string>G10L20P0Z0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="ActionButton" name="actionbutton_5">
+             <property name="text">
+              <string>Ref All</string>
+             </property>
+             <property name="actionName" stdset="0">
+              <string>machine.home.all</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="title">
+           <string>Mode</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="ActionButton" name="actionbutton_14">
+             <property name="text">
+              <string>Manual</string>
+             </property>
+             <property name="actionName" stdset="0">
+              <string>machine.mode.manual</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ActionButton" name="actionbutton_15">
+             <property name="text">
+              <string>MDI</string>
+             </property>
+             <property name="actionName" stdset="0">
+              <string>machine.mode.mdi</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ActionButton" name="actionbutton_16">
+             <property name="text">
+              <string>Auto</string>
+             </property>
+             <property name="actionName" stdset="0">
+              <string>machine.mode.auto</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="MDIEntry" name="mdientry">
+          <property name="placeholderText">
+           <string>MDI Entry</string>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="ActionButton" name="actionbutton_3">
+            <property name="text">
+             <string>Run</string>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>program.run</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ActionButton" name="actionbutton_7">
+            <property name="text">
+             <string>Step</string>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>program.step</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ActionButton" name="actionbutton_4">
+            <property name="text">
+             <string>Pause</string>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>program.pause</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ActionButton" name="actionbutton_6">
+            <property name="text">
+             <string>Abort</string>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>program.abort</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionOPEN">
+   <property name="text">
+    <string>oPEN</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionFullscreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Fullscreen</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ActionButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.action_button</header>
+  </customwidget>
+  <customwidget>
+   <class>MDIButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.mdi_button</header>
+  </customwidget>
+  <customwidget>
+   <class>DROLabel</class>
+   <extends>QLabel</extends>
+   <header>qtpyvcp.widgets.display_widgets.dro_label</header>
+  </customwidget>
+  <customwidget>
+   <class>VTKBackPlot</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.display_widgets.vtk_backplot.vtk_backplot</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MDIEntry</class>
+   <extends>QLineEdit</extends>
+   <header>qtpyvcp.widgets.input_widgets.mdientry_widget</header>
+  </customwidget>
+  <customwidget>
+   <class>GcodeTextEdit</class>
+   <extends>QPlainTextEdit</extends>
+   <header>qtpyvcp.widgets.input_widgets.gcode_text_edit</header>
+  </customwidget>
+  <customwidget>
+   <class>RecentFileComboBox</class>
+   <extends>QComboBox</extends>
+   <header>qtpyvcp.widgets.input_widgets.recent_file_combobox</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnClearVtk</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>clearLivePlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>459</x>
+     <y>1123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>459</x>
+     <y>555</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnZView</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewZ()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>676</x>
+     <y>1123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>459</x>
+     <y>555</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
